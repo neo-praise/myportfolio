@@ -5,7 +5,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="border-t border-white/5 py-5 lg:py-15 bg-[#02000e]"
+      className="border-t border-white/5 py-5 lg:py-15 bg-[#02000e] scroll-mt-15"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">

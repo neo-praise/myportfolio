@@ -26,7 +26,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="border-t border-white/5 bg-[#02000e] py-2 lg:py-2"
+      className="border-t border-white/5 bg-[#02000e] py-10 lg:py-5 scroll-mt-15"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">

@@ -6,6 +6,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 
 const navLinks = [
@@ -15,6 +16,8 @@ const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
+
+const cvFilePath = "/cv/Osondu_Emmanuel_Praise_Front_End_Developer_CV.pdf";
 
 export default function Navbar() {
   return (
@@ -54,11 +57,7 @@ export default function Navbar() {
             variant="outline"
             className="border-violet-500/60 bg-transparent text-white hover:bg-violet-500/10 hover:text-white"
           >
-            <a
-              href="/cv/Osondu_Emmanuel_Praise_Front_End_Developer_CV.pdf"
-              download
-              className="flex"
-            >
+            <a href={cvFilePath} download className="flex">
               <Download className="mr-2 size-5" />
               Download CV
             </a>
@@ -86,19 +85,22 @@ export default function Navbar() {
 
             <nav className="mt-8 flex flex-col gap-2">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="rounded-lg px-4 py-3 text-zinc-300 transition-colors hover:bg-white/5 hover:text-white"
-                >
-                  {link.label}
-                </a>
+                <SheetClose asChild key={link.href}>
+                  <a
+                    href={link.href}
+                    className="rounded-lg px-4 py-3 text-zinc-300 transition-colors hover:bg-white/5 hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                </SheetClose>
               ))}
             </nav>
 
-            <Button className="mt-6 w-full bg-violet-600 hover:bg-violet-500">
-              <Download className="mr-2 size-4" />
-              Download CV
+            <Button className="mt-6 w-1/2 bg-violet-600 hover:bg-violet-500 ml-3">
+              <a href={cvFilePath} download className="flex">
+                <Download className="mr-2 size-4" />
+                Download CV
+              </a>
             </Button>
           </SheetContent>
         </Sheet>

@@ -30,7 +30,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="border-t border-white/5 py-15 lg:py-20 bg-[#02000e]"
+      className="border-t border-white/5 py-15 lg:py-20 bg-[#02000e] scroll-mt-15"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
